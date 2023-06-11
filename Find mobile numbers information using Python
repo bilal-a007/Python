@@ -1,0 +1,11 @@
+import phonenumbers
+#number = '+923322747666'
+number = '+91 8234 123456'
+
+from phonenumbers import geocoder
+a = phonenumbers.parse (number,'CH')
+print('Country: ',geocoder.description_for_number(a,"en"))
+
+from phonenumbers import carrier
+b = phonenumbers.parse (number,'RO')
+print('Service Provider: ',carrier.name_for_number(b,'en'))
